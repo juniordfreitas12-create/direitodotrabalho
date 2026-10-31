@@ -1,0 +1,24 @@
+title: Direito em Foco
+tagline: Direito do Trabalho explicado de forma clara
+description: Conteúdo informativo sobre Direito do Trabalho, por Alrimar Freitas.
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+# Se o repositório se chamar seunome.github.io, deixe baseurl vazio.
+# Se tiver outro nome (ex.: meu-blog), use baseurl: "/meu-blog"
+baseurl: ""
+url: ""
+
+author:
+  name: Alrimar Freitas
+  role: Assistente Jurídico
+  instagram: alrimarfreitas
+
+permalink: /:year/:month/:title/
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
