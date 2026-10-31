@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'pt-BR' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != '/' %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">§</span>
+        <span class="brand-text">{{ site.title }}</span>
+      </a>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">Início</a>
+        <a href="{{ '/sobre/' | relative_url }}">Sobre</a>
+        <a class="nav-cta" href="https://instagram.com/{{ site.author.instagram }}" target="_blank" rel="noopener">@{{ site.author.instagram }}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-name">{{ site.author.name }} · {{ site.author.role }}</p>
+      <p class="footer-note">
+        Conteúdo meramente informativo, sem caráter de consultoria ou aconselhamento jurídico
+        e sem finalidade de captação de clientes. Cada caso exige análise individual por
+        advogado(a) habilitado(a).
+      </p>
+      <p class="footer-links">
+        <a href="https://instagram.com/{{ site.author.instagram }}" target="_blank" rel="noopener">Instagram @{{ site.author.instagram }}</a>
+        · <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

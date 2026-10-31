@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    {% if page.category %}<span class="tag">{{ page.category }}</span>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+      · por {{ site.author.name }}
+    </p>
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <aside class="author-box">
+    <div class="avatar">AF</div>
+    <div>
+      <strong>{{ site.author.name }}</strong>
+      <span>{{ site.author.role }}</span>
+      <a href="https://instagram.com/{{ site.author.instagram }}" target="_blank" rel="noopener">Siga no Instagram @{{ site.author.instagram }}</a>
+    </div>
+  </aside>
+
+  <p class="back"><a href="{{ '/' | relative_url }}">← Voltar para todos os posts</a></p>
+</article>
